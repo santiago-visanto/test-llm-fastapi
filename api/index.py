@@ -31,10 +31,10 @@ chain = (
 )
 
 # Define the endpoint
-@app.post("/llm_response")
+@app.post("/api/llm_response")
 async def get_llm_response(input_string: InputString):
     # Invoke the Langchain chain with the input string as the topic
-    response = chain.invoke(input_string.text)
+    response = chain.invoke("baby")
     
     # Return the response
     return  response
